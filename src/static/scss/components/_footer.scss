@@ -1,0 +1,137 @@
+.footer{
+  background: #37383D;
+  padding: 50px 0 20px;
+  &-wrap{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: 50px;
+  }
+  &-item{
+    width: 25%;
+    .btn-primary{
+      margin-top: -10px;
+      padding: 13px 39px 13px 18px;
+      font-size: 14px;
+      line-height: 14px;
+      letter-spacing: 0.56px;
+      text-transform: uppercase;
+      &:before{
+        width: 11px;
+        height: 11px;
+        background-size: cover;
+        top: 11px;
+        right: 20px;
+      }
+      &:hover{
+        &:before{
+          top: 13px;
+        }
+      }
+    }
+  }
+  &-logo{
+    width: 25%;
+    a{
+      margin-bottom: 35px;
+    }
+    &__payment{
+      display: flex;
+      flex-wrap: wrap;
+      li{
+        margin-right: 13px;
+      }
+      a{
+        margin-bottom: 0;
+      }
+    }
+  }
+  &-info{
+    display: flex;
+    margin-bottom: 20px;
+    &__title{
+      margin-left: 10px;
+      width: calc(100% - 20px);
+      color: #FFF;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 14px; /* 100% */
+      a{
+        color: #FFF;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 14px; /* 100% */
+        &:hover{
+          color: $primary;
+        }
+      }
+    }
+  }
+  &-title{
+    color: rgba($white, .5);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px; /* 100% */
+    letter-spacing: 0.56px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  &-nav{
+    display: flex;
+    flex-wrap: wrap;
+    li{
+      width: 50%;
+      margin-bottom: 15px;
+    }
+    a{
+      color: #FFF;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      letter-spacing: 0.56px;
+      text-transform: uppercase;
+      &:hover{
+        color: $primary;
+      }
+    }
+  }
+  &-social{
+    margin-bottom: 40px;
+    display: flex;
+    li{
+      margin-right: 10px;
+    }
+    a{
+      width: 34px;
+      height: 34px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid $primary;
+      border-radius: 50%;
+    }
+  }
+  &-bottom{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    border-top: 2px dashed rgba(223, 224, 229, .21);
+    span, a{
+      color: rgba($white, .5);
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+    a{
+      &:hover{
+        color: $primary;
+      }
+    }
+  }
+}
