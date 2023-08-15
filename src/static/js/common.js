@@ -113,6 +113,26 @@ $('.offers-slider').slick({
         },
     ]
 });
+$('.work-slider__service').slick({
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    autoplay: false,
+    infinite: true,
+    dots: true,
+    appendDots: $('.work-slider-dots'),
+    prevArrow: $('.work-nav .prev'),
+    nextArrow: $('.work-nav .next'),
+    responsive: [
+        {
+            breakpoint: 900,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                infinite: true,
+            }
+        },
+    ]
+});
 $('.work-slider').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -204,6 +224,24 @@ if($(window).width() <= 992){
 }
 if($('.hero').length > 0){}else{
     $('.header').addClass('page-nav');
+    $(window).on('scroll', function() {
+        var $this = $(this),
+            $hero = $('.top'),
+            $header = $('.header');
+        if($('.top').length > 0){
+            if ($this.scrollTop() > $hero.height() - 20) {
+                $header.addClass('before-scroll-nav');
+            }else{
+                $header.removeClass('before-scroll-nav');
+            }
+            if ($this.scrollTop() > $hero.height() + 100) {
+                $header.addClass('scroll-nav');
+            }
+            else{
+                $header.removeClass('scroll-nav');
+            }
+        }
+    });
 }
 $('.header-btn').on('click', function (e) {
     e.preventDefault();
