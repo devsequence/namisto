@@ -551,6 +551,13 @@ button{
   span{
     color: #E73638;
   }
+  &.title-page__small{
+    font-family: $SolomonSans;
+    font-size: 60px;
+    font-weight: 900;
+    line-height: 66px;
+    letter-spacing: 1.2px;
+  }
 }
 .nav-list{
   margin-bottom: 30px;
