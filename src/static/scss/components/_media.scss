@@ -83,6 +83,11 @@
   }
 }
 @media screen and (max-width: 992px){
+  .title-page{
+    font-size: 40px;
+    line-height: 46px; /* 115% */
+    letter-spacing: 0.8px;
+  }
   .hero{
     &-title{
       font-size: 40px;
