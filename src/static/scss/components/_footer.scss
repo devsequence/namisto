@@ -5,7 +5,7 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding-bottom: 50px;
+    padding-bottom: 38px;
   }
   &-item{
     width: 25%;
@@ -32,6 +32,7 @@
   }
   &-logo{
     width: 25%;
+    max-width: 245px;
     a{
       margin-bottom: 35px;
     }
@@ -77,14 +78,14 @@
     line-height: 14px; /* 100% */
     letter-spacing: 0.56px;
     text-transform: uppercase;
-    margin-bottom: 20px;
+    margin-bottom: 17px;
   }
   &-nav{
     display: flex;
     flex-wrap: wrap;
     li{
       width: 50%;
-      margin-bottom: 15px;
+      margin-bottom: 10px
     }
     a{
       color: #FFF;

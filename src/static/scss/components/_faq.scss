@@ -1,5 +1,8 @@
 .faq{
-  padding: 120px 0;
+  padding: 116px 0 90px;
+  &-wrap{
+    margin: -5px 0 0;
+  }
   &-item{
     padding: 29px 15px 29px 30px;
     margin-bottom: 15px;
@@ -80,7 +83,7 @@
   }
 }
 .seo{
-  padding: 120px 0;
+  padding: 107px 0 80px;
 
 }
 .seo-text, .wysiwyg {
@@ -137,10 +140,10 @@
     font-style: normal;
     font-weight: 700;
     line-height: 20px;
-    margin-bottom: 6px;
+    margin-bottom: 10px;
   }
   ul{
-    margin-bottom: 40px;
+    margin-bottom: 31px;
     li{
       color: #5A5C63;
       font-size: 16px;
@@ -241,6 +244,7 @@
         font-style: normal;
         font-weight: 700;
         line-height: 34px;
+        margin-left: 12px;
       }
     }
   }
@@ -292,7 +296,7 @@
     border-radius: 10px 100px 10px 10px;
     background: #FFF;
     box-shadow: 0px 8px 54px 0px rgba(12, 11, 34, 0.11);
-    padding: 50px 40px;
+    padding: 46px 40px;
   }
   &-info{
     display: flex;
