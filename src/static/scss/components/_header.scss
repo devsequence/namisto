@@ -4,7 +4,7 @@
   z-index: 30;
   transition: all ease 300ms;
   width: 100%;
-  padding: 25px 0;
+  padding: 22px 0 25px;
   a{
     &:hover{
       color: #E73638;
@@ -44,6 +44,10 @@
   &-desc{
     width: 100%;
   }
+  &-info{
+    margin-top: -7px;
+    margin-left: 17px;
+  }
   &-location{
     color: #37383D;
     font-size: 14px;
@@ -52,7 +56,7 @@
     padding-left: 20px;
     line-height: 22px; /* 100% */
     position: relative;
-    margin-bottom: 9px;
+    margin-bottom: 7px;
     &:before{
       position: absolute;
       content: '';
@@ -71,13 +75,16 @@
       }
     }
   }
+  &-address{
+    margin: 0px 0 0 15px;
+  }
   &-pin{
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
     padding-left: 20px;
     line-height: 22px; /* 100% */
-    margin-bottom: 9px;
+    margin-bottom: 4px;
     position: relative;
     &:before{
       position: absolute;

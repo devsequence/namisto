@@ -393,6 +393,8 @@ button{
   ul{
     display: flex;
     align-items: center;
+    overflow-x: auto;
+    overflow-y: hidden;
   }
   li{
     color: $default-100;
@@ -401,6 +403,8 @@ button{
     font-weight: 500;
     line-height: 14px; /* 100% */
     position: relative;
+    display: flex;
+    white-space: nowrap;
     &:after{
       position: relative;
       content: '';
@@ -440,7 +444,8 @@ button{
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
-    line-height: 14px; /* 100% */
+    line-height: 14px;
+    white-space: nowrap;
     &:hover{
       color: $primary;
     }
@@ -560,16 +565,19 @@ button{
   }
 }
 .nav-list{
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   ul{
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    overflow: auto;
+    padding-bottom: 10px;
   }
   li{
     margin: 0 20px 20px;
+    white-space: nowrap;
   }
   a{
+    white-space: nowrap;
     color: #37383D;
     font-size: 20px;
     font-style: normal;
