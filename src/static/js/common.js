@@ -279,4 +279,27 @@ $('.btn-gray').on('click', function () {
     $(this).addClass('disabled').next().text('Next').attr('type', 'button');
     $('.progress-item__line').removeClass('check');
 });
-// Wait for the DOM to be ready
+function popupOpen() {
+    var $popupButton = $('.btn-popup');
+    $popupButton.on('click', function (e) {
+        var $this = $(this);
+        var popupButtonData = $this.data('popup');
+        $('.popup').removeClass('active');
+        $('body').addClass('scroll');
+        $('div[data-popup = '+popupButtonData+']').addClass('active');
+        // $('body').addClass('scroll');
+    });
+}
+popupOpen();
+$('.popup-close').on('click', function (e) {
+    var $this = $(this);
+    $this.parents('.popup').removeClass('active');
+    $('.popup-overlay').removeClass('active');
+    $('body').removeClass('scroll');
+});
+$('.popup-overlay').on('click', function (e) {
+    var $this = $(this);
+    $this.removeClass('active');
+    $('.popup').removeClass('active');
+    $('body').removeClass('scroll');
+});

@@ -43,10 +43,11 @@
   }
   &-desc{
     width: 100%;
+    max-width: 1040px;
+    margin: 0 0 0 auto;
   }
   &-info{
     margin-top: -7px;
-    margin-left: 17px;
   }
   &-location{
     color: #37383D;
@@ -76,7 +77,7 @@
     }
   }
   &-address{
-    margin: 0px 0 0 15px;
+    margin: 0 83px 0 83px;
   }
   &-pin{
     font-size: 14px;
@@ -158,13 +159,13 @@
   }
   &-top{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
+    justify-content: flex-end;
+    padding-bottom: 12px;
+    margin-bottom: 21px;
     border-bottom: 1px solid #D4D6DA;
   }
   &-social{
+    margin: 0 0 0 80px;
     ul{
       display: flex;
       column-gap: 10px;
@@ -181,6 +182,7 @@
     }
   }
   &-lang{
+    margin: 8px 0 0 50px;
     &__title{
       color: #37383D;
       font-size: 16px;
@@ -206,6 +208,7 @@
   }
   &-nav{
     width: 100%;
+
     ul{
       display: flex;
       justify-content: space-between;
@@ -228,6 +231,17 @@
 }
 .header-pat{
   display: none;
+}
+@media screen and (max-width: 1260px) {
+  .header{
+    &-address, &-social, &-lang{
+      margin: 0;
+    }
+    &-top{
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
 }
 @media screen and (max-width: 992px) {
    .header{
