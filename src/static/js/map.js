@@ -137,7 +137,7 @@ function initMap() {
 		);
 		const map = new google.maps.Map(document.getElementById("map"), {
 			zoom: Number(zoomMap),
-			bottom: myLatLng,
+			// center: myLatLng,
 			disableDefaultUI: true,
 
 		});

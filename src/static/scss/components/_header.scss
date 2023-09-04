@@ -72,10 +72,34 @@
         top: 5px;
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10' fill='none'%3E%3Cpath d='M4.99997 7.85018C4.82075 7.85018 4.64155 7.78175 4.50492 7.64518L0.205141 3.34536C-0.0683805 3.07184 -0.0683805 2.62837 0.205141 2.35496C0.478553 2.08155 0.921933 2.08155 1.19548 2.35496L4.99997 6.15968L8.80449 2.35509C9.07801 2.08168 9.52135 2.08168 9.79474 2.35509C10.0684 2.6285 10.0684 3.07197 9.79474 3.34549L5.49503 7.64531C5.35832 7.78191 5.17913 7.85018 4.99997 7.85018Z' fill='%2337383D'/%3E%3C/svg%3E");
       }
+      &.active{
+        transform: rotate(180deg);
+      }
+
+    }
+    .location-list__list{
+      opacity: 0;
+      visibility: hidden;
+      z-index: -1;
+      position: absolute;
+      top: 90%;
+      background: $white;
+      padding: 10px;
+      border-radius: 5px;
+      a{
+        font-weight: 500;
+      }
+      &.active{
+        opacity: 1;
+        visibility: visible;
+        z-index: 1;
+        top: 80%;
+      }
     }
   }
   &-address{
     margin: 0 83px 0 83px;
+
   }
   &-pin{
     font-size: 14px;
@@ -180,6 +204,7 @@
     }
   }
   &-lang{
+    position: relative;
     margin: 8px 0 0 50px;
     &__title{
       color: #37383D;
@@ -189,6 +214,7 @@
       line-height: 16px; /* 100% */
       text-transform: uppercase;
       position: relative;
+      cursor: pointer;
       padding-right: 20px;
       &:after{
         position: absolute;
@@ -199,9 +225,30 @@
         height: 10px;
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='11' viewBox='0 0 10 11' fill='none'%3E%3Cpath d='M4.99997 8.38729C4.82075 8.38729 4.64155 8.31886 4.50492 8.18229L0.205141 3.88247C-0.0683805 3.60895 -0.0683805 3.16548 0.205141 2.89207C0.478553 2.61866 0.921933 2.61866 1.19548 2.89207L4.99997 6.69679L8.80449 2.8922C9.07801 2.61879 9.52135 2.61879 9.79474 2.8922C10.0684 3.16561 10.0684 3.60908 9.79474 3.8826L5.49503 8.18242C5.35832 8.31902 5.17913 8.38729 4.99997 8.38729Z' fill='%2337383D'/%3E%3C/svg%3E");
       }
+      &.active{
+        &:after{
+          transform: rotate(180deg);
+        }
+      }
     }
     &__list{
-      display: none;
+      opacity: 0;
+      visibility: hidden;
+      z-index: -1;
+      position: absolute;
+      top: 90%;
+      background: $white;
+      padding: 10px;
+      border-radius: 5px;
+      a{
+        font-weight: 500;
+      }
+      &.active{
+        opacity: 1;
+        visibility: visible;
+        z-index: 1;
+        top: 80%;
+      }
     }
   }
   &-nav{

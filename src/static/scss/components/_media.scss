@@ -870,6 +870,13 @@
   }
 }
 @media screen and (max-width: 567px){
+  .seo-text img.img-right,
+  .wysiwyg img.img-right{
+    width: 100%;
+    float: none;
+    margin: 10px auto 15px;
+    border-radius: 40px 10px 10px 10px;
+  }
   .header{
     &-logo{
       width: 66px;
@@ -919,6 +926,7 @@
   .footer{
     &-logo,
     &-item{
+      max-width: 100%;
       width: 100%;
     }
     &-logo{

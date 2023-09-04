@@ -255,7 +255,27 @@ $('.header-btn').on('click', function (e) {
     $('.header').toggleClass('active');
     $('body').toggleClass('scroll');
 });
-
+$('.location-list__title, .header-lang__title').on('click', function (e) {
+    e.preventDefault();
+    $(this).toggleClass('active');
+    $(this).next().toggleClass('active');
+});
+$(document).mouseup( function(e){ // событие клика по веб-документу
+    var locationList = $( ".location-list" ); // тут указываем ID элемента
+    if ( !locationList.is(e.target) // если клик был не по нашему блоку
+        && locationList.has(e.target).length === 0 ) { // и не по его дочерним элементам
+        $('.location-list__title').removeClass('active');
+        $('.location-list__list').removeClass('active');
+    }
+});
+$(document).mouseup( function(e){ // событие клика по веб-документу
+    var locationList = $( ".header-lang" ); // тут указываем ID элемента
+    if ( !locationList.is(e.target) // если клик был не по нашему блоку
+        && locationList.has(e.target).length === 0 ) { // и не по его дочерним элементам
+        $('.header-lang__title').removeClass('active');
+        $('.header-lang__list').removeClass('active');
+    }
+});
 var count;
 $(".tab-item__list input").change(function() {
     count = 0;
