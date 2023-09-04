@@ -137,7 +137,7 @@
     tr{
       &:last-of-type{
         td{
-          &:last-of-type{
+          &:nth-child(2){
             border-bottom-right-radius: 10px;
           }
         }
@@ -746,6 +746,11 @@
 }
 @media screen and (max-width: 768px){
   .offers{
+    &-item{
+      &__media{
+        margin-bottom: 10px;
+      }
+    }
     &-wrap{
       .offers-item{
         margin: 0 0 30px;
@@ -906,6 +911,9 @@
     }
     &-media{
       height: 650px;
+    }
+    .btn-primary{
+      background: $white;
     }
   }
   .footer{

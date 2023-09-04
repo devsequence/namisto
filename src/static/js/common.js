@@ -90,6 +90,12 @@ $('.hero-slider').slick({
     infinite: true,
     prevArrow: $('.hero-nav .prev'),
     nextArrow: $('.hero-nav .next'),
+    // responsive: [{
+    //     breakpoint: 992,
+    //     settings: {
+    //         dots: true,
+    //     }
+    // }]
 });
 $('.offers-slider').slick({
     slidesToShow: 2,
