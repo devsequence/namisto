@@ -43,8 +43,13 @@
   }
 }
 @media screen and (max-width: 1200px){
+  .service-info__wrap{
+    flex-wrap: wrap;
+    margin: 0 -15px;
+  }
   .service-info__item {
-    width: calc(50% - 40px);
+    width: calc(50% - 30px);
+    margin: 0 15px 20px;
   }
   .parallax-item{
     max-width: 350px;
@@ -115,6 +120,83 @@
   display: block !important;
 }
 @media screen and (max-width: 992px){
+  .about-work{
+    overflow: hidden;
+  }
+  .top-info{
+    flex-wrap: wrap;
+  }
+  .top-item{
+    width: 50%;
+    margin-bottom: 20px;
+    margin-right: 0;
+  }
+  .service-info{
+    &__item {
+      padding: 30px;
+      width: calc(100% - 40px);
+    }
+    &__title {
+      font-size: 22px;
+      line-height: 22px;
+    }
+    &__media {
+      width: 22px;
+      height: 22px;
+      img{
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+  .seo-text .title-section,
+  .seo-text h1,
+  .wysiwyg .title-section,
+  .wysiwyg h1{
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: .48px;
+    margin-bottom: 20px;
+  }
+  .seo-text, .wysiwyg {
+    img{
+      float: none;
+      width: 100%;
+      height: auto;
+      margin: 0;
+      max-width: 768px;
+      &.img-left{
+        border-radius:10px 40px 10px 10px;
+        margin: 0;
+      }
+      &.img-right{
+        border-radius: 40px 10px 10px 10px;
+        margin: 0;
+      }
+    }
+  }
+  .seo-text, .wysiwyg {
+   .alignright, .alignleft{
+     width: 100%;
+     float: none;
+     img{
+       margin: 0;
+       width: 100%;
+       max-width: 768px;
+       height: auto;
+     }
+   }
+    .alignright{
+      img{
+        border-radius: 40px 10px 10px 10px;
+      }
+    }
+    .alignleft{
+      img{
+        border-radius: 10px 40px 10px 10px;
+      }
+    }
+  }
   .seo-text table{
     th, td{
       &:nth-child(3), &:nth-child(4){
@@ -661,6 +743,11 @@
   }
   .reviews  {
     padding: 50px 0;
+    &-slider{
+      &__item{
+        margin: 45px auto;
+      }
+    }
     .slide{
       img{
         width: 100%;
@@ -745,6 +832,9 @@
   }
 }
 @media screen and (max-width: 768px){
+  .top-item{
+    width: 100%;
+  }
   .offers{
     &-item{
       &__media{
@@ -954,6 +1044,7 @@
     }
   }
 }
+
 @media screen and (max-width: 480px){
   .hero{
     &-desc {
@@ -1001,5 +1092,18 @@
   .offers-item{
     display: flex;
     flex-direction: column;
+  }
+}
+@media screen and (max-width: 420px){
+  .reviews-slider__item{
+    max-width: 310px;
+    margin: 0 auto;
+  }
+  .title-section {
+    span{
+      &:before, &:after{
+        display: none;
+      }
+    }
   }
 }

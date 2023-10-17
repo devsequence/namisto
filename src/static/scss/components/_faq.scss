@@ -134,6 +134,36 @@
       border-radius: 10px 200px 10px 10px;
     }
   }
+  picture{
+    &.img-right{
+      float: right;
+      img{
+        margin: 0 0 10px 10px;
+        border-radius: 200px 10px 10px 10px;
+      }
+    }
+    &.img-left{
+      float: left;
+      img{
+        margin: 0 10px 10px 0;
+        border-radius: 10px 200px 10px 10px;
+      }
+    }
+  }
+  .alignright{
+      float: right;
+      img{
+        margin: 0 0 10px 10px;
+        border-radius: 200px 10px 10px 10px;
+      }
+  }
+  .alignleft{
+    float: left;
+    img{
+      margin: 0 10px 10px 0;
+      border-radius: 10px 200px 10px 10px;
+    }
+  }
   h4{
     color: #37383D;
     font-size: 20px;

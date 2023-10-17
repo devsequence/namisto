@@ -23,6 +23,12 @@ $().fancybox({
     backFocus : false,
     selector : '.certificates-slider .slide:not(.slick-cloned) ',
 });
+$('.certificates-slider').on('init', function (event, slick, direction) {
+    if ($('.certificates-slider .slide').length > 3) {
+    }else{
+        $('.certificates-slider-dots').hide();
+    }
+});
 $('.certificates-slider').slick({
     slidesToShow: 5,
     slidesToScroll: 1,
@@ -52,6 +58,12 @@ $('.certificates-slider').slick({
             }
         },
     ]
+});
+$('.team-slider').on('init', function (event, slick, direction) {
+    if ($('.team-slider .slide').length > 3) {
+    }else{
+        $('.team-slider-dots').hide();
+    }
 });
 $('.team-slider').slick({
     slidesToShow: 3,
@@ -97,6 +109,12 @@ $('.hero-slider').slick({
     //     }
     // }]
 });
+$('.offers-slider').on('init', function (event, slick, direction) {
+    if ($('.offers-slider .slide').length > 2) {
+    }else{
+        $('.offers-slider-dots').hide();
+    }
+});
 $('.offers-slider').slick({
     slidesToShow: 2,
     slidesToScroll: 1,
@@ -118,6 +136,12 @@ $('.offers-slider').slick({
             }
         },
     ]
+});
+$('.work-slider__service').on('init', function (event, slick, direction) {
+    if ($('.work-slider__service .slide').length > 2) {
+    }else{
+        $('.work-slider-dots').hide();
+    }
 });
 $('.work-slider__service').slick({
     slidesToShow: 2,
@@ -328,4 +352,8 @@ $('.popup-overlay').on('click', function (e) {
     $this.removeClass('active');
     $('.popup').removeClass('active');
     $('body').removeClass('scroll');
+});
+$('.next-button').on('click', function (e) {
+    e.preventDefault();
+    $('.w-slider-arrow-right').trigger('click')
 });
