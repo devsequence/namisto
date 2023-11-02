@@ -1,5 +1,4 @@
 function initMap() {
-
 	if($(window).width() <= 992) {
 		const zoomMap = 14;
 		const mapLat = $('.mapLat').val();
