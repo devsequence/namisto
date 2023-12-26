@@ -131,6 +131,10 @@
     margin-bottom: 20px;
     margin-right: 0;
   }
+  .subtitle-section{
+    font-size: 18px;
+    line-height: 22px;
+  }
   .service-info{
     &__item {
       padding: 30px;
@@ -769,6 +773,7 @@
       letter-spacing: 0.48px;
       margin-bottom: 20px;
     }
+
     &-info{
       &__title{
         font-size: 14px;
@@ -954,6 +959,27 @@
   .work-item__list{
     li{
       width: 100%;
+    }
+  }
+  .faq-item{
+    &__title{
+      &:before{
+        width: 25px;
+        height: 25px;
+        background-size: 12px;
+      }
+    }
+    &__text{}
+  }
+  .faq-price{
+    .faq-item{
+      &__text{
+        width: 100%;
+        overflow: auto;
+        table{
+          width: 768px;
+        }
+      }
     }
   }
 }
