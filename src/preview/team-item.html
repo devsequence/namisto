@@ -91,6 +91,10 @@
                    <li><a href="#">Відгуки</a></li>
                    <li><a href="#">Корисна інформація</a></li>
                </ul>
+               <button type="button" class="search-btn btn-popup" data-popup="search">
+                   <span>Пошук</span>
+                   <img src="../static/images/search.svg" alt="search">
+               </button>
                <div class="header-wrap">
                    <div class="header-info">
                        <div class="header-info__media">
@@ -448,6 +452,31 @@
     </div>
     <div class="popup-overlay"></div>
 </div>
+<div class="popup request-popup" data-popup="search">
+    <div class="popup-wrap">
+        <div class="popup-close"></div>
+        <div class="banner-item banner-item__white">
+            <div class="banner-item__desc">
+                <div class="title-section title-section__left">
+                    <span>Знайдіть будь-яку процедуру</span>
+                </div>
+                <div class="banner-item__text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis hic nobis optio veniam voluptas voluptatem, voluptates.
+                </div>
+                <div class="banner-item__form">
+                    <form action="#">
+                        <input type="text" placeholder="LPG-масаж...">
+                        <button type="submit" class="btn">Пошук</button>
+                    </form>
+                </div>
+            </div>
+            <div class="banner-item__media">
+                <img src="../static/images/banner-2.jpg" alt="banner">
+            </div>
+        </div>
+    </div>
+    <div class="popup-overlay"></div>
+</div>
 
 </div>
 <!--end-page-wrapper-->
@@ -459,6 +488,7 @@
 <script type="text/javascript" src="../static/js/slick.min.js"></script>
 <script type="text/javascript" src="../static/js/aos.min.js"></script>
 <script type="text/javascript" src="../static/js/fancybox.min.js"></script>
+<script type="text/javascript" src="../static/js/jquery.validate.min.js"></script>
 <script  type="text/javascript" src="../static/js/common.js"></script>
 <script async defer  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAt8S8uRnvbEkGevo-cdzjBRCRPGfsfbYI&callback=initMap&libraries=&v=weekly"></script>
 <script  type="text/javascript" src="../static/js/map.js"></script>

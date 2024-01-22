@@ -242,6 +242,119 @@
     }
   }
 }
+.reviews-form{
+  display: flex;
+  justify-content: center;
+  form{
+    width: 100%;
+    max-width: 768px;
+    display: flex;
+    margin: 0 -15px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  label{
+    span{
+      width: 100%;
+      &.error{
+        color: #e73638;
+      }
+    }
+  }
+  .label{
+    width: calc(50% - 15px);
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+  }
+  .textarea-label{
+    width: calc(50% - 15px);
+    margin-bottom: 30px;
+  }
+  input, textarea{
+    color: #69696C;
+    font-family: $SolomonSans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 125% */
+    padding: 18px 30px 16px 30px;
+    width: 100%;
+    max-width: 509px;
+    border-radius: 25px;
+    outline: none;
+    border: 2px dashed  #DFE0E5;
+    &.error{
+      border-color: #e73638;
+      color: #e73638;
+    }
+  }
+  textarea{
+    width: 100%;
+    height: 145px;
+    max-width: 100%;
+    resize: vertical;
+  }
+  .btn-primary{
+    background: transparent;
+  }
+  .image-input{
+      text-align: center;
+      display: block;
+       width: calc(50% - 15px);
+      height: 145px;
+      max-width: 369px;
+      input{
+        display: none;
+      }
+      &.active{
+        border-radius: 25px;
+        border: 2px dashed  #DFE0E5;
+        padding: 10px;
+      }
+      label{
+        display: block;
+        color: #69696C;
+        font-family: $SolomonSans;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px;
+        padding: 18px 30px 16px 30px;
+        border-radius: 25px;
+        border: 2px dashed  #DFE0E5;
+        cursor: pointer;
+        height: 145px;
+        text-align: left;
+      }
+      i{
+        font-size: 125%;
+        margin-right: .3rem;
+        &:hover{
+          animation: shake .35s
+        }
+      }
+      img{
+        max-width: 100px;
+        display: none;
+        margin: 0 auto;
+        border-radius: 10px;
+      }
+      span{
+        display: none;
+        text-align: center;
+        cursor: pointer;
+      }
+    @keyframes shake {
+      0%{transform: rotate(0deg)}
+      25%{transform: rotate(10deg)}
+      50%{transform: rotate(0deg)}
+      75%{transform: rotate(-10deg)}
+      100%{transform: rotate(0deg)}
+    }
+  }
+}
 .section-nav{
   margin-bottom: 50px;
   ul{

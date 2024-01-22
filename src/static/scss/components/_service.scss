@@ -5,6 +5,9 @@
       display: flex;
       flex-wrap: wrap;
       margin: 0 -30px;
+      .title-section{
+        margin: 0 15px 60px;
+      }
     }
     .service-item{
       width: calc(33.3333% - 30px);

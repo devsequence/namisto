@@ -249,6 +249,12 @@
       border-radius: 5px;
       a{
         font-weight: 500;
+        color: #37383d;
+        font-size: 16px;
+        font-style: normal;
+        line-height: 16px;
+        position: relative;
+        cursor: pointer;
       }
       &.active{
         opacity: 1;
@@ -259,12 +265,17 @@
     }
   }
   &-nav{
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
-
+    justify-content: space-between;
+    align-items: center;
     ul{
+      width: calc(100% - 40px);
       display: flex;
       justify-content: space-between;
     }
+    li{}
     a{
       color: #37383D;
       font-family: $SolomonSans;
@@ -275,6 +286,27 @@
       letter-spacing: 0.64px;
       text-transform: uppercase;
     }
+  }
+}
+.search-btn{
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(231,54,56,.1);
+  img, svg{
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+  }
+  span{
+    display: none;
+  }
+  &:hover{
+    opacity: .8;
   }
 }
 .header-wrap,
@@ -456,6 +488,7 @@
        .header-wrap,
        .header-social__bottom{
          display: block;
+         width: 100%;
        }
        &:before{
          z-index: 1;
@@ -463,7 +496,10 @@
          background: #fff;
        }
        .header-nav{
-         display: block;
+         display: flex;
+         flex-direction: column;
+         justify-content: flex-start;
+         align-items: flex-start;
          position: absolute;
          left: 0;
          top: 100%;
@@ -474,6 +510,27 @@
        }
        ul{
          flex-direction: column;
+         width: 100%;
+       }
+       .search-btn{
+         margin: 10px 0 10px;
+         background: transparent;
+         height: auto;
+         width: auto;
+         align-items: center;
+         flex-direction: row;
+         span{
+           display: block;
+           color: #37383d;
+           font-family: $SolomonSans;
+           font-size: 16px;
+           font-style: normal;
+           font-weight: 700;
+           line-height: normal;
+           letter-spacing: .64px;
+           text-transform: uppercase;
+           margin-right: 10px;
+         }
        }
        .header-social__bottom, .header-social{
          ul{

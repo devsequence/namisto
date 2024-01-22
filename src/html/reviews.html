@@ -185,6 +185,27 @@
                 </div>
             </div>
         </section>
+        <section class="reviews reviews-page">
+            <div class="container">
+                <div class="title-section"><span>Залишіть свій відгук</span></div>
+                <div class="reviews-form">
+                    <form action="#" class="reviews__form">
+                        <label class="label"><input type="text" name="reviews_surname" placeholder="Прізвище" required></label>
+                        <label class="label"><input type="text" name="reviews_name" placeholder="Ім'я" required></label>
+                        <label class="label"><input type="tel" name="reviews_phone" placeholder="Телефон" required></label>
+                        <label class="label"><input type="email" name="reviews_email" placeholder="Емейл" required></label>
+                        <label class="textarea-label"><textarea name="reviews_text" placeholder="Текст" required></textarea></label>
+                        <div class="image-input">
+                            <input type="file" name="reviews_photo" accept="image/*" id="imageInput" required>
+                            <label for="imageInput" class="image-button">Завантажте Ваше фото</label>
+                            <img src="" class="image-preview">
+                            <span class="change-image">Завантажте інше фото</span>
+                        </div>
+                        <button type="submit" class="btn-primary">Надіслати</button>
+                    </form>
+                </div>
+            </div>
+        </section>
         <section class="map">
             <div class="map-item" id="map"></div>
             <div class="map-inner">
