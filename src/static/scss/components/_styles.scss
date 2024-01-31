@@ -976,3 +976,10 @@ body{
     overflow: hidden;
   }
 }
+.slider-custom{
+  display: flex;
+}
+.reviews-slider{
+ position: relative;
+  z-index: 4;
+}

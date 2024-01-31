@@ -173,24 +173,32 @@ $('.work-slider').slick({
     prevArrow: $('.work-nav .prev'),
     nextArrow: $('.work-nav .next'),
 });
-$('.reviews-slider').slick({
-    dots: true,
-    infinite: false,
-    speed: 300,
-    slidesToShow: 1,
-    variableWidth: true,
-    appendDots: $('.reviews-slider-dots'),
-    prevArrow: $('.reviews-nav .prev'),
-    nextArrow: $('.reviews-nav .next'),
-    responsive: [
-        {
-            breakpoint: 992,
-            settings: {
-                variableWidth: false,
-            }
-        },
-    ]
-});
+
+if ($('.reviews-slider .slide').length > 3) {
+    $('.reviews-slider').slick({
+        dots: true,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 1,
+        variableWidth: true,
+        appendDots: $('.reviews-slider-dots'),
+        prevArrow: $('.reviews-nav .prev'),
+        nextArrow: $('.reviews-nav .next'),
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    variableWidth: false,
+                }
+            },
+        ]
+    });
+}else{
+    $('.reviews-slider').addClass('slider-custom');
+    $('.reviews-slider-dots').hide();
+    $('.reviews-nav').hide();
+}
+
 $('.has-sub .has-sub__title').on('click', function (e) {
     e.preventDefault();
     const $ths = $(this);
