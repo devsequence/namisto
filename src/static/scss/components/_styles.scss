@@ -981,11 +981,19 @@ body{
   .slide{
     padding: 0 10px;
     .reviews-slider__item{
-
     }
+  }
+}
+.reviews{
+  .container{
+    position: relative;
+    z-index: 3;
   }
 }
 .reviews-slider{
  position: relative;
   z-index: 4;
+  .slide {
+    padding: 0 10px;
+  }
 }
