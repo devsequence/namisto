@@ -978,6 +978,12 @@ body{
 }
 .slider-custom{
   display: flex;
+  .slide{
+    padding: 0 10px;
+    .reviews-slider__item{
+
+    }
+  }
 }
 .reviews-slider{
  position: relative;
