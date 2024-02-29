@@ -543,7 +543,7 @@
         display: none;
       }
     }
-    &-address,
+    &-social,
     &-license,
     &-nav{
       display: none;
@@ -942,7 +942,7 @@
   }
   .header{
     &-info{
-      padding-top: 32px;
+      margin-bottom: 10px;
     }
     &-location{
       display: none;

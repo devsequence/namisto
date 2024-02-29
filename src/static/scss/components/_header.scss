@@ -380,7 +380,9 @@
     .banner-item__form {
       width: 300px;
       input{
-        padding: 14px 100px 14px 15px;
+        padding: 10px 100px 9px 15px;
+        font-size: 14px;
+        line-height: 14px;
       }
     }
     .btn{
@@ -392,13 +394,13 @@
       line-height: 20px;
       letter-spacing: .64px;
       text-transform: uppercase;
-      padding: 14px 20px;
+      padding: 8px 16px;
       transition: all ease 300ms;
       border: 2px solid #E73638;
       border-radius: 124px;
       background: #E73638;
       &:hover{
-        background: transparent;
+        background: #FFF;
         color: #E73638;
       }
     }
@@ -636,6 +638,7 @@
            flex-wrap: wrap;
          }
          .btn{
+           position: absolute;
            max-width: 150px;
            margin: 0 10px 0;
          }
@@ -747,18 +750,64 @@
      }
    }
 }
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 768px) {
   .header{
+    &-lang{
+      display: none;
+    }
+    &-top{
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+@media screen and (max-width: 480px) {
+
+  .header{
+    &-address{
+      width: 100%;
+      max-width: 300px;
+      padding: 0 15px;
+    }
     .header-search {
       .banner-item__form{
         form{
           flex-direction: column;
         }
+        input{
+          padding: 10px 40px 9px 15px;
+        }
         .btn{
           max-width: 100%;
-          margin: 20px 0 0;
+          margin: 0;
+          font-size: 0;
+          &:hover{
+            background: transparent;
+          }
+          &:before{
+            position: absolute;
+            content: '';
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            max-width: 18px;
+            height: 100%;
+            max-height:  18px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' fill='%23000000' height='32px' width='32px' version='1.1' id='Capa_1' viewBox='0 0 488.4 488.4' xml:space='preserve' %3E%3Cg%3E%3Cg%3E%3Cpath d='M0,203.25c0,112.1,91.2,203.2,203.2,203.2c51.6,0,98.8-19.4,134.7-51.2l129.5,129.5c2.4,2.4,5.5,3.6,8.7,3.6 s6.3-1.2,8.7-3.6c4.8-4.8,4.8-12.5,0-17.3l-129.6-129.5c31.8-35.9,51.2-83,51.2-134.7c0-112.1-91.2-203.2-203.2-203.2 S0,91.15,0,203.25z M381.9,203.25c0,98.5-80.2,178.7-178.7,178.7s-178.7-80.2-178.7-178.7s80.2-178.7,178.7-178.7 S381.9,104.65,381.9,203.25z' fill='%23fff'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            background-size: cover;
+            background-repeat: no-repeat;
+          }
         }
+
       }
+    }
+    &-search__output{
+      width: 100%;
+      min-width: 80vw;
+      margin: 0 auto;
+      right: auto;
+      left: -10vw;
     }
   }
 }
