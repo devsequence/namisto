@@ -32,42 +32,54 @@ h1, h2, h3, h4, h5, h6{
   font-family: $SolomonSans;
   font-weight: bold;
 }
-h1 {
+h1, .h1 {
   font-size: 64px;
   line-height: 120%;
   color: $default;
 }
 
-h2 {
+h2, .h2 {
   font-size: 54px;
   line-height: 100%;
   color: $default;
 }
 
-h3 {
+h3, .h3 {
   font-size: 18px;
   line-height: 26px;
   color: $default;
 }
 
-h4 {
+h4, .h4 {
   font-size: 16px;
   line-height: 28px;
   color: $default;
 }
 
-h5 {
+h5, .h5 {
   font-size: 16px;
   line-height: 26px;
   color: $default;
 }
 
-h6 {
+h6, .h6 {
   font-size: 14px;
   line-height: 21px;
   color: $default;
 }
 
+@media screen and (max-width: 992px){
+  h1, .h1 {
+    font-size: 32px;
+  }
+  h2, .h2 {
+    font-size: 24px;
+  }
+  h4, .h4 {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
 p {
   font-size: 14px;
   line-height: 23px;

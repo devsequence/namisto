@@ -404,3 +404,25 @@ $('.change-image').on('click', function() {
     $('.image-button').css('display', 'block');
     $('.image-input').removeClass('active');
 });
+
+$(".header-search__input").on("keyup change", function(e) {
+    if($(this).val().length > 3) {
+        $('.header-search__output').addClass('is-visible');
+    }else{
+        $('.header-search__output').removeClass('is-visible');
+    }
+});
+$(".header-search__input").on("focus", function(e) {
+    if($(this).val().length > 3) {
+        $('.header-search__output').addClass('is-visible');
+    }else{
+        $('.header-search__output').removeClass('is-visible');
+    }
+});
+$(document).mouseup( function(e){ // событие клика по веб-документу
+    var locationList = $( ".header-search__input" ); // тут указываем ID элемента
+    if ( !locationList.is(e.target) // если клик был не по нашему блоку
+        && locationList.has(e.target).length === 0 ) { // и не по его дочерним элементам
+        $('.header-search__output').removeClass('is-visible');
+    }
+});
