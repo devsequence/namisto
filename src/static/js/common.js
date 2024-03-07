@@ -173,31 +173,45 @@ $('.work-slider').slick({
     prevArrow: $('.work-nav .prev'),
     nextArrow: $('.work-nav .next'),
 });
-
-if ($('.reviews-slider .slide').length > 3) {
+function initSliderReviews() {
     $('.reviews-slider').slick({
         dots: true,
         infinite: false,
         speed: 300,
         slidesToShow: 1,
         variableWidth: true,
+        centerMode: true,
         appendDots: $('.reviews-slider-dots'),
         prevArrow: $('.reviews-nav .prev'),
         nextArrow: $('.reviews-nav .next'),
         responsive: [
             {
                 breakpoint: 992,
-                settings: {
-                    variableWidth: false,
-                }
+                // settings: {
+                //     variableWidth: false,
+                // }
             },
         ]
     });
-}else{
+}
+if ($('.reviews-slider .slide').length > 3 || $(window).width() < 1230){
+    initSliderReviews();
+}
+else{
     $('.reviews-slider').addClass('slider-custom');
     $('.reviews-slider-dots').hide();
     $('.reviews-nav').hide();
 }
+if($('.reviews-slider .slide').length < 2){
+    $('.reviews-slider-dots').hide();
+}
+// if ($(window).width < 992 ){
+//     initSliderReviews();
+// }else{
+//     $('.reviews-slider').addClass('slider-custom');
+//     $('.reviews-slider-dots').hide();
+//     $('.reviews-nav').hide();
+// }
 
 $('.has-sub .has-sub__title').on('click', function (e) {
     e.preventDefault();
@@ -426,3 +440,4 @@ $(document).mouseup( function(e){ // событие клика по веб-до�
         $('.header-search__output').removeClass('is-visible');
     }
 });
+$("input[type='tel']").inputmask({"mask": "+38 (999) 999-99-99"});

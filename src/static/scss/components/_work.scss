@@ -309,8 +309,9 @@
 .reviews{
   padding: 108px 0 87px;
   &-slider{
-
-    margin:-40px 0 0;
+    margin: 0 0 0;
+    display: flex;
+    justify-content: center;
     &:after{
       position: absolute;
       content: '';
@@ -327,7 +328,10 @@
       max-width: 390px;
       padding: 20px;
       margin: 45px 0;
-      &-top{
+      @media screen and (max-width: 992px) {
+        box-shadow: none;
+      }
+        &-top{
         display: flex;
         align-items: center;
         margin-bottom: 20px;
@@ -403,11 +407,17 @@
       }
     }
   }
-  .slide{
-    &:first-of-type{
-      padding-left: 285px;
+  .slick-track{
+    .slide{
+      &:first-of-type{
+        padding-left: 285px;
+        @media screen and (max-width: 1230px) {
+          padding-left: 10px;
+        }
+      }
     }
   }
+
   &-nav{
     display: flex;
     justify-content: space-between;

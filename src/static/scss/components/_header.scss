@@ -400,8 +400,9 @@
       border-radius: 124px;
       background: #E73638;
       &:hover{
-        background: #FFF;
-        color: #E73638;
+        //background: #FFF;
+        //color: #E73638;
+        opacity: .8;
       }
     }
   }
@@ -726,16 +727,7 @@
        }
        .header-search__output{
          display: none;
-         position: relative;
          max-width: 100%;
-         padding: 20px 0;
-         margin: 10px 0 0;
-         width: 100%;
-         top: 0;
-         left: 0;
-         background: transparent;
-         right: 0;
-         border: 0;
          box-shadow: none;
          ul{
            border: 0;
@@ -745,6 +737,7 @@
          }
          &.is-visible{
            display: block;
+           z-index: 5;
          }
        }
      }
@@ -762,7 +755,6 @@
   }
 }
 @media screen and (max-width: 480px) {
-
   .header{
     &-address{
       width: 100%;
@@ -782,7 +774,7 @@
           margin: 0;
           font-size: 0;
           &:hover{
-            background: transparent;
+            //background: transparent;
           }
           &:before{
             position: absolute;
